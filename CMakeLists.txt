@@ -1,13 +1,22 @@
-﻿# CMakeList.txt : CMake project for next, include source and define
-# project specific logic here.
-#
-cmake_minimum_required(VERSION 3.8)
+﻿cmake_minimum_required(VERSION 3.8)
 
-project("next")
+project(next)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 
-# Add source to this project's executable.
-add_executable(next "src/main.cpp" "src/token_type.h" "src/token.h" "src/token.cpp" "src/scanner.h" "src/scanner.cpp" )
-
-# TODO: Add tests and install targets if needed.
+add_executable(next
+    "src/main.cpp"
+    "src/token_type.h"
+    "src/token.h"
+    "src/token.cpp"
+    "src/scanner.h"
+    "src/scanner.cpp"
+    "src/expr.h"
+    "src/assign_expr.h"
+    "src/binary_expr.h"
+    "src/call_expr.h"
+    "src/grouping_expr.h"
+    "src/literal_expr.h"
+    "src/logical_expr.h"
+    "src/unary_expr.h"
+    "src/var_expr.h")
